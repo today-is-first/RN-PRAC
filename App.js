@@ -2,6 +2,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import theme from './theme';
 import Header from './components/Header';
 import Shop from './components/Shop';
+import Menu from './components/Menu';
 import * as Font from 'expo-font';
 
 async function loadFonts() {
@@ -31,6 +32,7 @@ export default function App() {
       <AppView>
         <Header />
         <Shop />
+        <Menu />
       </AppView>
     </ThemeProvider>
   );
