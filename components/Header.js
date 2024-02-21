@@ -21,9 +21,8 @@ const HeaderText = styled.Text`
   font-weight: 700;
 `;
 
-const HeaderButton = styled.Button`
-  background-color: 'none';
-  color: #000;
+const HeaderButton = styled.Text`
+  font-size: 18px;
 `;
 
 const Header = () => {
@@ -32,7 +31,7 @@ const Header = () => {
       <HeaderWrapper>
         <ArrowIcon width="30px" height="30px" />
         <HeaderText>장바구니</HeaderText>
-        <HeaderButton title="전체삭제" />
+        <HeaderButton>전체삭제</HeaderButton>
       </HeaderWrapper>
     </HeaderView>
   );

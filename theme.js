@@ -8,6 +8,7 @@ const theme = {
     textGray: '#888888',
     iconGray: '#BBBBBB',
     backgroundGray: '#F3F3F3',
+    splitGray: '#E6E6E6',
   },
 };
 
