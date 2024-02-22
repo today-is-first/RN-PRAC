@@ -8,6 +8,8 @@ import MenuOrderButton from '../components/MenuOrderButton';
 
 const MenuOrderView = styled.View`
   margin: 0;
+  padding-bottom: 80px;
+  background-color: ${theme.colors.white};
 `;
 
 const Scroll = styled(ScrollView)`

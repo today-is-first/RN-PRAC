@@ -1,7 +1,7 @@
-import { View, Text, Button, Image } from 'react-native';
 import styled from 'styled-components';
 import ArrowIcon from '../assets/icons/ArrowIcon';
 import { TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const HeaderView = styled.View`
   justify-content: center;
@@ -29,10 +29,12 @@ const HeaderButton = styled.Text`
 `;
 
 const Header = () => {
+  const navigaion = useNavigation();
+
   return (
     <HeaderView>
       <HeaderWrapper>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigaion.goBack()}>
           <ArrowIcon width="30px" height="30px" />
         </TouchableOpacity>
         <HeaderText>장바구니</HeaderText>

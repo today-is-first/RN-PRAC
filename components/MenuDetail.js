@@ -3,7 +3,7 @@ import theme from '../theme';
 import MenuOption from './MenuOption';
 import ShopCard from './ShopCard';
 
-const MenuDetail = () => {
+const MenuDetail = ({}) => {
   const MenuTitle = styled.Text`
     padding: 12px 24px 6px;
     font-size: 18px;
