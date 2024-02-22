@@ -12,7 +12,8 @@ async function loadFonts() {
 
 const AppView = styled.View`
   margin: 0;
-  padding: 0;
+  padding: 0 0 80px 0;
+  flex: 1;
 `;
 
 export default function App() {

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
 import theme from '../theme';
+import RemoveIcon from '../assets/icons/RemoveIcon';
+import AddIcon from '../assets/icons/AddIcon';
 
 const MenuOption = () => {
   const MenuPriceAmountWrapper = styled.View`
@@ -24,12 +26,6 @@ const MenuOption = () => {
     border-color: ${theme.colors.iconGray};
     padding: 6px 24px 12px;
   `;
-  const MenuAmountDecrease = styled.Text`
-    font-weight: 900;
-  `;
-  const MenuAmountIncrease = styled.Text`
-    font-weight: 900;
-  `;
   const MenuAmountText = styled.Text`
     font-size: 14px;
     font-weight: 600;
@@ -40,11 +36,11 @@ const MenuOption = () => {
         <MenuTotalPrice>16,000원</MenuTotalPrice>
         <MenuAmountWrapper>
           <TouchableOpacity>
-            <MenuAmountDecrease>-</MenuAmountDecrease>
+            <RemoveIcon width="18" height="18" />
           </TouchableOpacity>
           <MenuAmountText>1개</MenuAmountText>
           <TouchableOpacity>
-            <MenuAmountIncrease>+</MenuAmountIncrease>
+            <AddIcon width="18" height="18" />
           </TouchableOpacity>
         </MenuAmountWrapper>
       </MenuPriceAmountWrapper>

@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import { ScrollView } from 'react-native';
 import theme from '../theme';
 import Header from '../components/Header';
@@ -8,11 +8,11 @@ import MenuOrderButton from '../components/MenuOrderButton';
 
 const MenuOrderView = styled.View`
   margin: 0;
-  padding: 0 0 80px 0;
 `;
 
 const Scroll = styled(ScrollView)`
   background-color: ${(props) => props.theme.colors.backgroundGray};
+  height: 100%;
 `;
 
 const OrderView = styled.View`
