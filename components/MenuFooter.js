@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 import theme from '../theme';
-const MenuFooterView = styled.View``;
+const MenuFooterView = styled.View`
+  justify-content: center;
+  align-items: center;
+`;
 const MenuFooterText = styled.Text`
-  padding: 24px;
+  text-align: center;
+  max-width: 500px;
+  padding: 20px 30px;
   color: ${theme.colors.textGray};
-  font-size: 14px;
+  font-size: 11px;
 `;
 
 const MenuFooter = () => {

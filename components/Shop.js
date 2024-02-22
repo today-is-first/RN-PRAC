@@ -7,20 +7,20 @@ const ShopContent = styled.View`
 `;
 
 const ShopName = styled.Text`
-  padding: 6px 24px;
-  font-size: 24px;
-  font-weight: 800;
+  padding: 0px 24px 10px;
+  font-size: 20px;
+  font-weight: 900;
   color: ${theme.colors.text};
 `;
 
 const ShopDeliveryType = styled.Text`
-  padding: 18px 24px 0;
-  font-size: 18px;
+  padding: 12px 24px 0;
+  font-size: 16px;
 `;
 const ShopDeliveryMessage = styled.Text`
-  padding: 4px 24px 18px;
+  padding: 0px 24px 12px;
   color: ${theme.colors.textGray};
-  font-size: 16px;
+  font-size: 14px;
 `;
 
 const Shop = () => {

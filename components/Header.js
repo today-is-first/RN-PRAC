@@ -2,19 +2,21 @@ import { View, Text, Button, Image } from 'react-native';
 import styled from 'styled-components';
 import ArrowIcon from '../assets/icons/ArrowIcon';
 
-const HeaderView = styled.View``;
+const HeaderView = styled.View`
+  justify-content: center;
+`;
 
 const HeaderWrapper = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 52px 24px 18px;
+  padding: 52px 24px 12px;
   border-bottom: 5px;
   background-color: ${(props) => props.theme.colors.white};
 `;
 
 const HeaderText = styled.Text`
-  font-size: 20px;
+  font-size: 18px;
   align-items: center;
   left: 50%;
   font-family: 'Pretendard';

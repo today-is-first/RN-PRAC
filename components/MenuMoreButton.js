@@ -7,8 +7,8 @@ const MenuMoreView = styled.View`
 `;
 
 const MenuMoreText = styled.Text`
-  padding: 6px;
-  font-size: 18px;
+  padding: 10px;
+  font-size: 14px;
   color: ${theme.colors.accent};
   font-weight: 900;
 `;

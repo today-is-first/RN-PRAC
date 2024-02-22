@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
 import theme from '../theme';
 
-const MenuResult = () => {
+const MenuOption = () => {
   const MenuPriceAmountWrapper = styled.View`
-    padding: 24px 24px 6px;
+    padding: 24px 24px 12px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -17,16 +17,22 @@ const MenuResult = () => {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 150px;
+    width: 170px;
+    height: 55px;
     border: 1px;
     border-radius: 25px;
     border-color: ${theme.colors.iconGray};
-    padding: 12px 24px;
+    padding: 6px 24px 12px;
   `;
-  const MenuAmountDecrease = styled.Text``;
-  const MenuAmountIncrease = styled.Text``;
+  const MenuAmountDecrease = styled.Text`
+    font-weight: 900;
+  `;
+  const MenuAmountIncrease = styled.Text`
+    font-weight: 900;
+  `;
   const MenuAmountText = styled.Text`
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
   `;
   return (
     <>
@@ -46,4 +52,4 @@ const MenuResult = () => {
   );
 };
 
-export default MenuResult;
+export default MenuOption;

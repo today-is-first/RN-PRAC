@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ShopCard from './ShopCard';
 import MenuDetail from './MenuDetail';
-import MenuResult from './MenuResult';
+import MenuOption from './MenuOption';
 import MenuMoreButton from './MenuMoreButton';
 import MenuTotalPrice from './MenuTotalPrice';
 import MenuFooter from './MenuFooter';
@@ -19,7 +19,7 @@ const Menu = () => {
     <MenuWrapper>
       <ShopCard>
         <MenuDetail />
-        <MenuResult />
+        <MenuOption />
       </ShopCard>
       <ShopCard>
         <MenuMoreButton />
