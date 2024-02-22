@@ -9,7 +9,7 @@ const MenuPriceWrapper = styled.View`
 const TotalText = styled.Text`
   padding: 4px 24px;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
 `;
 
 const MenuTotalPrice = () => {

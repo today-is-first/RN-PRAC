@@ -25,9 +25,6 @@ const OrderView = styled.View`
 const AppView = styled.View`
   margin: 0;
   padding: 0 0 80px 0;
-  background-color: transparent;
-  border: 1px;
-  border-color: red;
 `;
 
 const Scroll = styled(ScrollView)`
