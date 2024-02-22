@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import theme from '../theme';
+import { TouchableOpacity } from 'react-native';
 
-const MenuMoreView = styled.View`
+const MenuMoreView = styled(TouchableOpacity)`
   justify-content: center;
   align-items: center;
 `;

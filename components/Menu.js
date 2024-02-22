@@ -20,6 +20,12 @@ const Menu = () => {
       <ShopCard>
         <MenuDetail />
         <MenuOption />
+        <MenuDetail />
+        <MenuOption />
+        <MenuDetail />
+        <MenuOption />
+        <MenuDetail />
+        <MenuOption />
       </ShopCard>
       <ShopCard>
         <MenuMoreButton />

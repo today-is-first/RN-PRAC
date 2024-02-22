@@ -3,12 +3,12 @@ import theme from '../theme';
 
 const MenuDetail = () => {
   const MenuTitle = styled.Text`
-    padding: 0 24px 12px;
+    padding: 12px 24px 6px;
     font-size: 18px;
   `;
 
   const MenuSubTitle = styled.Text`
-    padding: 0 24px 4px;
+    padding: 0 24px 12px;
     color: ${theme.colors.textGray};
     font-size: 14px;
   `;

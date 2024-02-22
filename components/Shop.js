@@ -7,7 +7,7 @@ const ShopContent = styled.View`
 `;
 
 const ShopName = styled.Text`
-  padding: 0px 24px 10px;
+  padding: 10px 24px;
   font-size: 20px;
   font-weight: 900;
   color: ${theme.colors.text};
