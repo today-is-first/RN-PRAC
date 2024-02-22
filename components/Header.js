@@ -28,7 +28,7 @@ const HeaderButton = styled.Text`
   font-size: 18px;
 `;
 
-const Header = () => {
+const Header = ({ leftChild, title, rightChild }) => {
   const navigaion = useNavigation();
 
   return (
@@ -37,7 +37,7 @@ const Header = () => {
         <TouchableOpacity onPress={() => navigaion.goBack()}>
           <ArrowIcon width="30px" height="30px" />
         </TouchableOpacity>
-        <HeaderText>장바구니</HeaderText>
+        <HeaderText>{title}</HeaderText>
         <TouchableOpacity>
           <HeaderButton>전체삭제</HeaderButton>
         </TouchableOpacity>

@@ -29,7 +29,11 @@ const MenuOrderPage = () => {
   return (
     <MenuOrderView>
       <Scroll>
-        <Header />
+        <Header
+          leftChild={leftChild}
+          title={'장바구니'}
+          rightChild={rightChild}
+        />
         <Shop />
         <Menu />
       </Scroll>
