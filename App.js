@@ -31,10 +31,10 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <AppView>
           <Stack.Navigator
-            initialRouteName={'Home'}
+            initialRouteName={'MenuOrder'}
             screenOptions={customStackNavigaionOptions}
           >
-            <Stack.Screen name="Home" component={MenuSelectPage} />
+            <Stack.Screen name="MenuSelect" component={MenuSelectPage} />
             <Stack.Screen name="MenuOrder" component={MenuOrderPage} />
           </Stack.Navigator>
         </AppView>

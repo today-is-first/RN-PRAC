@@ -34,7 +34,7 @@ const Header = ({ leftChild, title, rightChild }) => {
   return (
     <HeaderView>
       <HeaderWrapper>
-        <TouchableOpacity onPress={() => navigaion.goBack()}>
+        <TouchableOpacity onPress={() => navigaion.navigate('MenuSelect')}>
           <ArrowIcon width="30px" height="30px" />
         </TouchableOpacity>
         <HeaderText>{title}</HeaderText>

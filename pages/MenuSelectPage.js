@@ -1,26 +1,45 @@
 import { useNavigation } from '@react-navigation/native';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, ScrollView } from 'react-native';
 import SelectMenu from '../components/SelelctMenu';
 import styled from 'styled-components';
 import MenuSelectData from '../stores/MenuSelectData';
+import MenuOrderButton from '../components/MenuOrderButton';
+import theme from '../theme';
 
 const SelectView = styled.View`
-  padding: 50px 0 0;
+  margin: 0;
+  padding: 50px 0 80px;
+  background-color: ${theme.colors.white};
 `;
-const SelectText = styled.Text`
-  text-align: center;
+
+const Scroll = styled(ScrollView)`
+  background-color: ${(props) => props.theme.colors.backgroundGray};
+  height: 100%;
+`;
+
+const OrderView = styled.View`
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  border-top-width: 1px;
+  border-top-color: ${theme.colors.splitGray};
 `;
 
 const MenuSelectPage = () => {
   const navigation = useNavigation();
   return (
     <SelectView>
-      {MenuSelectData.map((menu) => (
-        <SelectMenu key={menu.id} {...menu} />
-      ))}
-      <TouchableOpacity onPress={() => navigation.navigate('MenuOrder')}>
-        <SelectText>sdsdsdsdss</SelectText>
-      </TouchableOpacity>
+      <Scroll>
+        {MenuSelectData.map((menu) => (
+          <SelectMenu key={menu.id} {...menu} />
+        ))}
+      </Scroll>
+      <OrderView>
+        <MenuOrderButton
+          price={16000}
+          onPress={() => navigation.navigate('MenuOrder')}
+        />
+      </OrderView>
     </SelectView>
   );
 };

@@ -19,10 +19,10 @@ const OrderText = styled.Text`
   font-weight: 700;
 `;
 
-const MenuOrderButton = () => {
+const MenuOrderButton = ({ price, onPress }) => {
   return (
-    <OrderButtonWrapper>
-      <OrderText>16,000원 배달 주문하기</OrderText>
+    <OrderButtonWrapper onPress={onPress}>
+      <OrderText>{price.toLocaleString('kr-Kr')}원 | 배달 주문하기</OrderText>
     </OrderButtonWrapper>
   );
 };
