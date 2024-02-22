@@ -6,7 +6,7 @@ import AddIcon from '../assets/icons/AddIcon';
 
 const MenuOption = () => {
   const MenuPriceAmountWrapper = styled.View`
-    padding: 24px 24px 12px;
+    padding: 12px 24px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@ const MenuOption = () => {
     border: 1px;
     border-radius: 25px;
     border-color: ${theme.colors.iconGray};
-    padding: 6px 24px 12px;
+    padding: 6px 24px;
   `;
   const MenuAmountText = styled.Text`
     font-size: 14px;

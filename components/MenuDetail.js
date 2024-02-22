@@ -10,7 +10,7 @@ const MenuDetail = () => {
   `;
 
   const MenuSubTitle = styled.Text`
-    padding: 0 24px 12px;
+    padding: 0 24px 4px;
     color: ${theme.colors.textGray};
     font-size: 14px;
   `;
