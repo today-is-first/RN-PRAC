@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import useMenuOrderStore from '../stores/MenuOrderData';
+import useMenuOrderStore from '../../stores/MenuOrderData';
 
 const MenuPriceWrapper = styled.View`
   margin: 5px 0;

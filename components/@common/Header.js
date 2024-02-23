@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import ArrowIcon from '../assets/icons/ArrowIcon';
+import ArrowIcon from '../../assets/icons/ArrowIcon';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import useMenuOrderStore from '../stores/MenuOrderData';
+import useMenuOrderStore from '../../stores/MenuOrderData';
 
 const HeaderView = styled.View`
   justify-content: center;

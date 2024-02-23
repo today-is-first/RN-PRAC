@@ -15,7 +15,6 @@ const useMenuOrderStore = create((set) => ({
           idx === existIndex ? { ...menu, amount: menu.amount + 1 } : menu,
         );
         return {
-          ...prev,
           menuList: updatedMenuList,
           totalPrice: prev.totalPrice + val.price,
         };
@@ -45,7 +44,6 @@ const useMenuOrderStore = create((set) => ({
         return menu;
       });
       return {
-        ...prev,
         menuList: updatedMenuList,
         totalPrice: prev.totalPrice + price * amountChange,
       };

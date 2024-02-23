@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
-import theme from '../theme';
-import RemoveIcon from '../assets/icons/RemoveIcon';
-import AddIcon from '../assets/icons/AddIcon';
-import useMenuOrderStore from '../stores/MenuOrderData';
+import theme from '../../theme';
+import RemoveIcon from '../../assets/icons/RemoveIcon';
+import AddIcon from '../../assets/icons/AddIcon';
+import useMenuOrderStore from '../../stores/MenuOrderData';
 
 const MenuPriceAmountWrapper = styled.View`
   padding: 12px 24px;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
-import theme from '../theme';
-import useMenuOrderStore from '../stores/MenuOrderData';
+import theme from '../../theme';
+import useMenuOrderStore from '../../stores/MenuOrderData';
 
 const OrderButtonWrapper = styled(TouchableOpacity)`
   position: absolute;

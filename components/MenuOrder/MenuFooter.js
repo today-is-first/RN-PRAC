@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../theme';
+import theme from '../../theme';
 const MenuFooterView = styled.View`
   justify-content: center;
   align-items: center;

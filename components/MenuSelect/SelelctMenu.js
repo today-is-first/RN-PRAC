@@ -1,7 +1,7 @@
-import ShopCard from './ShopCard';
+import ShopCard from '../@common/ShopCard';
 import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
-import useMenuOrderStore from '../stores/MenuOrderData';
+import useMenuOrderStore from '../../stores/MenuOrderData';
 
 const MenuWrapper = styled.View`
   flex-direction: row;

@@ -1,9 +1,9 @@
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity, ScrollView } from 'react-native';
-import SelectMenu from '../components/SelelctMenu';
+import SelectMenu from '../components/MenuSelect/SelelctMenu';
 import styled from 'styled-components';
 import MenuSelectData from '../stores/MenuSelectData';
-import MenuOrderButton from '../components/MenuOrderButton';
+import MenuOrderButton from '../components/@common/MenuOrderButton';
 import theme from '../theme';
 import useMenuOrderStore from '../stores/MenuOrderData';
 

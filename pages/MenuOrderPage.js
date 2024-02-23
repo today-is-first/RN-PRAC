@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { ScrollView } from 'react-native';
 import theme from '../theme';
-import Header from '../components/Header';
-import Shop from '../components/Shop';
-import Menu from '../components/Menu';
-import MenuOrderButton from '../components/MenuOrderButton';
+import Header from '../components/@common/Header';
+import Shop from '../components/MenuOrder/Shop';
+import Menu from '../components/MenuOrder/Menu';
+import MenuOrderButton from '../components/@common/MenuOrderButton';
 
 const MenuOrderView = styled.View`
   margin: 0;

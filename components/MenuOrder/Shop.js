@@ -1,6 +1,6 @@
 import styled, { View, Text } from 'styled-components';
-import theme from '../theme';
-import ShopCard from './ShopCard';
+import theme from '../../theme';
+import ShopCard from '../@common/ShopCard';
 
 const ShopContent = styled.View`
   margin-top: 10px;

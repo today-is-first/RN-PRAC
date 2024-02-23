@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import theme from '../theme';
+import theme from '../../theme';
 import { TouchableOpacity } from 'react-native';
-import AddIcon from '../assets/icons/AddIcon';
+import AddIcon from '../../assets/icons/AddIcon';
 import { useNavigation } from '@react-navigation/native';
-import ShopCard from './ShopCard';
+import ShopCard from '../@common/ShopCard';
 
 const MenuMoreView = styled(TouchableOpacity)`
   flex-direction: row;

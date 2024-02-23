@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import ShopCard from './ShopCard';
+import ShopCard from '../@common/ShopCard';
 import MenuDetail from './MenuDetail';
 import MenuMoreButton from './MenuMoreButton';
 import MenuTotalPrice from './MenuTotalPrice';
 import MenuFooter from './MenuFooter';
-import useMenuOrderStore from '../stores/MenuOrderData';
+import useMenuOrderStore from '../../stores/MenuOrderData';
 
 const MenuWrapper = styled.View`
   margin-top: 10px;
