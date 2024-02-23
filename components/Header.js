@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import ArrowIcon from '../assets/icons/ArrowIcon';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import useMenuOrderStore from '../stores/MenuOrderData';
 
 const HeaderView = styled.View`
   justify-content: center;
@@ -28,9 +29,9 @@ const HeaderButton = styled.Text`
   font-size: 18px;
 `;
 
-const Header = ({ leftChild, title, rightChild }) => {
+const Header = ({ title }) => {
   const navigaion = useNavigation();
-
+  const { initMenuList } = useMenuOrderStore();
   return (
     <HeaderView>
       <HeaderWrapper>
@@ -38,7 +39,7 @@ const Header = ({ leftChild, title, rightChild }) => {
           <ArrowIcon width="30px" height="30px" />
         </TouchableOpacity>
         <HeaderText>{title}</HeaderText>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => initMenuList()}>
           <HeaderButton>전체삭제</HeaderButton>
         </TouchableOpacity>
       </HeaderWrapper>

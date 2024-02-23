@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import useMenuOrderStore from '../stores/MenuOrderData';
 
 const MenuPriceWrapper = styled.View`
   margin: 5px 0;
@@ -13,10 +14,11 @@ const TotalText = styled.Text`
 `;
 
 const MenuTotalPrice = () => {
+  const { totalPrice } = useMenuOrderStore();
   return (
     <MenuPriceWrapper>
       <TotalText>총 주문금액</TotalText>
-      <TotalText>16,000원</TotalText>
+      <TotalText>{totalPrice.toLocaleString('kr-Kr')}원</TotalText>
     </MenuPriceWrapper>
   );
 };

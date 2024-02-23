@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import MenuSelectData from '../stores/MenuSelectData';
 import MenuOrderButton from '../components/MenuOrderButton';
 import theme from '../theme';
+import useMenuOrderStore from '../stores/MenuOrderData';
 
 const SelectView = styled.View`
   margin: 0;
@@ -27,6 +28,7 @@ const OrderView = styled.View`
 
 const MenuSelectPage = () => {
   const navigation = useNavigation();
+  const { totalPrice } = useMenuOrderStore();
   return (
     <SelectView>
       <Scroll>
@@ -36,7 +38,7 @@ const MenuSelectPage = () => {
       </Scroll>
       <OrderView>
         <MenuOrderButton
-          price={16000}
+          totalPrice={totalPrice}
           onPress={() => navigation.navigate('MenuOrder')}
         />
       </OrderView>

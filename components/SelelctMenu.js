@@ -1,6 +1,7 @@
 import ShopCard from './ShopCard';
 import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
+import useMenuOrderStore from '../stores/MenuOrderData';
 
 const MenuWrapper = styled.View`
   flex-direction: row;
@@ -31,14 +32,19 @@ const MenuImage = styled.Image`
   height: 105%;
 `;
 
-const SelectMenu = ({ title, price, img }) => {
+const SelectMenu = ({ menu, price, img, option }) => {
+  const { addMenuList } = useMenuOrderStore();
   return (
     <ShopCard>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => addMenuList({ menu, price: Number(price), option })}
+      >
         <MenuWrapper>
           <TextWrapper>
-            <MenuTitle>{title}</MenuTitle>
-            <MenuPrice>{Number(price).toLocaleString('ko-KR')}원</MenuPrice>
+            <MenuTitle>{menu}</MenuTitle>
+            <MenuPrice>
+              {Number(price).toLocaleString('kr-KR') + '원'}
+            </MenuPrice>
           </TextWrapper>
           <ImageView>
             <MenuImage source={img} resizeMode="cover" />

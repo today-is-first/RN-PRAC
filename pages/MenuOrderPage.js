@@ -34,7 +34,7 @@ const MenuOrderPage = () => {
         <Menu />
       </Scroll>
       <OrderView>
-        <MenuOrderButton price={16000} />
+        <MenuOrderButton />
       </OrderView>
     </MenuOrderView>
   );

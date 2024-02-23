@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import theme from '../theme';
 import { TouchableOpacity } from 'react-native';
 import AddIcon from '../assets/icons/AddIcon';
+import { useNavigation } from '@react-navigation/native';
+import ShopCard from './ShopCard';
 
 const MenuMoreView = styled(TouchableOpacity)`
   flex-direction: row;
@@ -17,11 +19,14 @@ const MenuMoreText = styled.Text`
 `;
 
 const MenuMoreButton = () => {
+  const navigation = useNavigation();
   return (
-    <MenuMoreView>
-      <AddIcon width="18" height="18" fill={theme.colors.accent} />
-      <MenuMoreText>더 담으러 가기</MenuMoreText>
-    </MenuMoreView>
+    <ShopCard>
+      <MenuMoreView onPress={() => navigation.navigate('MenuSelect')}>
+        <AddIcon width="18" height="18" fill={theme.colors.accent} />
+        <MenuMoreText>더 담으러 가기</MenuMoreText>
+      </MenuMoreView>
+    </ShopCard>
   );
 };
 

@@ -4,6 +4,7 @@ import MenuDetail from './MenuDetail';
 import MenuMoreButton from './MenuMoreButton';
 import MenuTotalPrice from './MenuTotalPrice';
 import MenuFooter from './MenuFooter';
+import useMenuOrderStore from '../stores/MenuOrderData';
 
 const MenuWrapper = styled.View`
   margin-top: 10px;
@@ -15,12 +16,13 @@ const Split = styled.View`
 `;
 
 const Menu = () => {
+  const { menuList } = useMenuOrderStore();
   return (
     <MenuWrapper>
-      <MenuDetail />
-      <ShopCard>
-        <MenuMoreButton />
-      </ShopCard>
+      {menuList.map((menu) => (
+        <MenuDetail key={menu.id} {...menu} />
+      ))}
+      <MenuMoreButton />
       <Split>
         <ShopCard>
           <MenuTotalPrice />

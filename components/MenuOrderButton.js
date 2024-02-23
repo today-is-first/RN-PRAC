@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
 import theme from '../theme';
+import useMenuOrderStore from '../stores/MenuOrderData';
 
 const OrderButtonWrapper = styled(TouchableOpacity)`
   position: absolute;
@@ -19,10 +20,13 @@ const OrderText = styled.Text`
   font-weight: 700;
 `;
 
-const MenuOrderButton = ({ price, onPress }) => {
+const MenuOrderButton = ({ onPress }) => {
+  const { totalPrice } = useMenuOrderStore();
   return (
     <OrderButtonWrapper onPress={onPress}>
-      <OrderText>{price.toLocaleString('kr-Kr')}원 | 배달 주문하기</OrderText>
+      <OrderText>
+        {totalPrice.toLocaleString('kr-KR')}원 | 배달 주문하기
+      </OrderText>
     </OrderButtonWrapper>
   );
 };
