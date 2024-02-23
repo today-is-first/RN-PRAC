@@ -28,7 +28,7 @@ const OrderView = styled.View`
 
 const MenuSelectPage = () => {
   const navigation = useNavigation();
-  const { totalPrice } = useMenuOrderStore();
+  const totalPrice = useMenuOrderStore((state) => state.totalPrice);
   return (
     <SelectView>
       <Scroll>

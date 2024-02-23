@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import theme from '../../theme';
 import { TouchableOpacity } from 'react-native';
@@ -30,4 +31,4 @@ const MenuMoreButton = () => {
   );
 };
 
-export default MenuMoreButton;
+export default React.memo(MenuMoreButton);

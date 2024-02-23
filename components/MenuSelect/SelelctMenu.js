@@ -1,3 +1,4 @@
+import React from 'react';
 import ShopCard from '../@common/ShopCard';
 import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
@@ -33,7 +34,7 @@ const MenuImage = styled.Image`
 `;
 
 const SelectMenu = ({ menu, price, img, option }) => {
-  const { addMenuList } = useMenuOrderStore();
+  const addMenuList = useMenuOrderStore((state) => state.addMenuList);
   return (
     <ShopCard>
       <TouchableOpacity
@@ -55,4 +56,4 @@ const SelectMenu = ({ menu, price, img, option }) => {
   );
 };
 
-export default SelectMenu;
+export default React.memo(SelectMenu);

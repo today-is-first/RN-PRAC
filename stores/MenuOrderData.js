@@ -36,6 +36,22 @@ const useMenuOrderStore = create((set) => ({
       return newState;
     });
   },
+  deleteMenu: (id) => {
+    set((prev) => {
+      const filteredMenuList = [];
+      let filteredPrice = 0;
+      prev.menuList.forEach((menu) => {
+        menu.id !== id
+          ? filteredMenuList.push(menu)
+          : (filteredPrice += menu.amount * menu.price);
+      });
+      return {
+        ...prev,
+        menuList: filteredMenuList,
+        totalPrice: prev.totalPrice - filteredPrice,
+      };
+    });
+  },
   setAmount: ({ id, amountChange, price }) =>
     set((prev) => {
       const updatedMenuList = prev.menuList.map((menu) => {

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../theme';
+import React from 'react';
+
 const MenuFooterView = styled.View`
   justify-content: center;
   align-items: center;
@@ -23,4 +25,4 @@ const MenuFooter = () => {
   );
 };
 
-export default MenuFooter;
+export default React.memo(MenuFooter);

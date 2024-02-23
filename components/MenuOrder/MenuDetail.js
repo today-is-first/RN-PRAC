@@ -2,9 +2,16 @@ import styled from 'styled-components';
 import theme from '../../theme';
 import MenuOption from './MenuOption';
 import ShopCard from '../@common/ShopCard';
+import MenuDeleteButton from './MenuDeleteButton';
+
+const MenuTopView = styled.View`
+  padding: 12px 24px 6px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const MenuTitle = styled.Text`
-  padding: 12px 24px 6px;
   font-size: 18px;
 `;
 
@@ -17,7 +24,10 @@ const MenuSubTitle = styled.Text`
 const MenuDetail = ({ id, menu, option, price, amount }) => {
   return (
     <ShopCard key={id}>
-      <MenuTitle>{menu}</MenuTitle>
+      <MenuTopView>
+        <MenuTitle>{menu}</MenuTitle>
+        <MenuDeleteButton id={id} />
+      </MenuTopView>
       {option.map((select, index) => (
         <MenuSubTitle key={index}>{select}</MenuSubTitle>
       ))}

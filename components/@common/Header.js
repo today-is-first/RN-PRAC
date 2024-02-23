@@ -1,3 +1,4 @@
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import ArrowIcon from '../../assets/icons/ArrowIcon';
 import { TouchableOpacity } from 'react-native';
@@ -29,16 +30,17 @@ const HeaderButton = styled.Text`
   font-size: 18px;
 `;
 
-const Header = ({ title }) => {
-  const navigaion = useNavigation();
-  const { initMenuList } = useMenuOrderStore();
+const Header = () => {
+  const navigation = useNavigation();
+  const initMenuList = useMenuOrderStore((state) => state.initMenuList);
+
   return (
     <HeaderView>
       <HeaderWrapper>
-        <TouchableOpacity onPress={() => navigaion.navigate('MenuSelect')}>
+        <TouchableOpacity onPress={() => navigation.navigate('MenuSelect')}>
           <ArrowIcon width="30px" height="30px" />
         </TouchableOpacity>
-        <HeaderText>{title}</HeaderText>
+        <HeaderText>장바구니</HeaderText>
         <TouchableOpacity onPress={() => initMenuList()}>
           <HeaderButton>전체삭제</HeaderButton>
         </TouchableOpacity>
@@ -47,4 +49,4 @@ const Header = ({ title }) => {
   );
 };
 
-export default Header;
+export default React.memo(Header);
