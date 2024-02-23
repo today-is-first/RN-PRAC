@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import theme from '../../theme';
 import MenuOption from './MenuOption';
@@ -11,9 +12,10 @@ const MenuTopView = styled.View`
   align-items: center;
 `;
 
-const MenuTitle = styled.Text`
+const MenuTitle = React.memo(styled.Text`
   font-size: 18px;
-`;
+  font-weight: 600;
+`);
 
 const MenuSubTitle = styled.Text`
   padding: 0 24px 4px;
